@@ -33,6 +33,8 @@ They are a set of 12 serial cross-sections with a spacing of 1 to 2 km and tied 
 1. **Acoustic Impedance Sections** https://drive.google.com/drive/folders/1ANce0auhTOXS0lcIoMfbTcG2r4lTdgfX?usp=sharing
 2. **Synthetic Seismic Sections** https://drive.google.com/drive/folders/1C6TAHjFPzltrU4nS1oeHeEdBsEVkWzDM?usp=sharing
 
+## Training, Validation and Testing Datasets
+1. **Object Detection Data** https://drive.google.com/drive/folders/1d1NtLFIHlRqjYtQvGjbJoVEzKlmHcwmj?usp=sharing 
 
 ## Results
 The study compares the overall performance of three models—YOLO v7, YOLO v8, and Detectron2—using various evaluation metrics, including training and validation loss, precision-recall curve, confusion matrix, and mAP on cross-sections labeled in the study. The evaluation involved a validation set of 45 unlabeled synthetic acoustic impedance images and a testing set of 92 synthetic seismic sections from coalmines and 10 seismic images from the public domain. Detectron2 exhibited superior performance with an mA50-mAP95 of 0.81%, outperforming YOLO v8 (0.66%) and YOLO v7 (0.52%). The average Recall, average Precision, and mAP50 values for Detectron2 were higher than YOLO v8 and v7, indicating better detection, segmentation, and prediction. While Detectron2 was the fastest to train (2.25 hours), YOLO v8 was ten times faster in evaluating the testing set (7.3 ms per image). Despite the class imbalance in the dataset (887 folds, 824 faults, and 225 flat layers), Detectron2 showed better overall performance, emphasizing the impact of class instances on algorithm performance. The study suggests the need for larger datasets, closer to 6000 instances (2000 per class), for optimal performance in segmentation algorithms, particularly when dealing with imbalanced classes.
