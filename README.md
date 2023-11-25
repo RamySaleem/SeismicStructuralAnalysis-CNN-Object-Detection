@@ -17,6 +17,23 @@ This study employed a Python code, available on GitHub as Synthetic-Seismicon, t
 
 ![](https://i.imgur.com/EVIr5NW.jpg)
 
+Ruhr Coalmines DataSet
+=====================
+The study area is explored by high-resolution, closely spaced, coal mines with an aerial extent of 323.29 km2 and a depth of 2 km. The subsurface data are provided by mine-workings (galleries, adits and shafts) as well as accompanying boreholes and seismic reflection profiles, which are supported by surface exposure enhanced by open-cast pits. These data were interpreted by Drozdzewski et al. (1980), who reported these observations and erected their own geological interpretations on a series of paper maps and cross-sections. 
+
+They are a set of 12 serial cross-sections with a spacing of 1 to 2 km and tied by two cross-lines. Further, Drozdzewski et al. (1980) indicate the levels of confidence in their interpretations critically using descriptive criteria. The stratigraphic column present in this study is put together and generated after Drozdzewski et al. (1980), Drozdzewski (1993), Suess et al. (2007), Cleal et al. (2009) and Uhl and Cleal (2010). The lithology, formations names, coal seams and stratigraphic units in this stratigraphic column are constrained by correlating the stratigraphic units from Drozdzewski et al. (1980) to other recent studies (e.g. Cleal et al. 2009; Uhl and Cleal 2010). 
+
+**Dataset can be found in the following links:**
+1. **Interpreted Images** https://drive.google.com/drive/folders/1j4PBXQyVx89rkVTvMS7Yjl7e7y5OTDrC?usp=sharing
+2. **Digitised Cross Sections** https://drive.google.com/drive/folders/1EabQCWqC1JExdLTRCJRx8MDAGHAhHy5N?usp=sharing
+3. All the maps and cross-section of the Ruhr subbasin, lower Rhine basin is available in the North Rhine-Westphalia Geological Survey – State Office – (GD NRW) for a fee https://www.gd.nrw.de/pr_kd.htm
+4. All the CSV files used in this study https://drive.google.com/drive/folders/14f8_Hzbos23ww6Do96CO2KGeDIIE870h?usp=sharing
+
+## Synthetic Seismic Dataset
+1. **Acoustic Impedance Sections** https://drive.google.com/drive/folders/1ANce0auhTOXS0lcIoMfbTcG2r4lTdgfX?usp=sharing
+2. **Synthetic Seismic Sections** https://drive.google.com/drive/folders/1C6TAHjFPzltrU4nS1oeHeEdBsEVkWzDM?usp=sharing
+
+
 ## Results
 The study compares the overall performance of three models—YOLO v7, YOLO v8, and Detectron2—using various evaluation metrics, including training and validation loss, precision-recall curve, confusion matrix, and mAP on cross-sections labeled in the study. The evaluation involved a validation set of 45 unlabeled synthetic acoustic impedance images and a testing set of 92 synthetic seismic sections from coalmines and 10 seismic images from the public domain. Detectron2 exhibited superior performance with an mA50-mAP95 of 0.81%, outperforming YOLO v8 (0.66%) and YOLO v7 (0.52%). The average Recall, average Precision, and mAP50 values for Detectron2 were higher than YOLO v8 and v7, indicating better detection, segmentation, and prediction. While Detectron2 was the fastest to train (2.25 hours), YOLO v8 was ten times faster in evaluating the testing set (7.3 ms per image). Despite the class imbalance in the dataset (887 folds, 824 faults, and 225 flat layers), Detectron2 showed better overall performance, emphasizing the impact of class instances on algorithm performance. The study suggests the need for larger datasets, closer to 6000 instances (2000 per class), for optimal performance in segmentation algorithms, particularly when dealing with imbalanced classes.
 
